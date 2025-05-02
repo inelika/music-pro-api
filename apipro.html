@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="api.css" />
+  <title>Music</title>
+</head>
+<body>
+  <h1>Music</h1>
+  <h2 id="current-track-title" style="color: white;">No track selected</h2>
+
+  <!-- Жанры -->
+  <select id="genre-select">
+    <option value=""> Select Genre </option>
+    <option value="132">Pop</option>
+    <option value="152">Electro</option>
+    <option value="116">Rap/Hip Hop</option>
+    <option value="85">Rock</option>
+    <option value="113">Jazz</option>
+  </select>
+
+  <!-- Поиск -->
+  <input type="text" id="search-input" placeholder="Search for a song..." />
+  <button id="search-btn">Search</button>
+  <!-- random  -->
+  <button id="random-btn">Random</button>
+
+  <div class="music-container" id="music-container">
+    <div class="music-info" id="music-info">
+      <h4 id="title">No track</h4>
+      <span class="timestamp" id="timestamp">00:00 / 00:30</span>
+      <div class="progress-container" id="progress-container">
+        <div class="progress" id="progress"></div>
+      </div>
+    </div>
+
+    <audio id="audio" controls></audio>
+
+    <div class="img-container">
+      <img src="https://dummyimage.com/110x110/ccc/000.png&text=Cover" alt="music-cover" id="cover" />
+    </div>
+
+    <div class="navigation">
+      <button id="play" class="action-btn action-btn-big">
+        <i class="fa fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="tracks-container" style="margin-top: 20px; color: white;"></div>
+  <div id="pagination-controls" style="margin: 10px; color: white;">
+    <button id="prev-page">Prev</button>
+    <span id="page-indicator">Page 1</span>
+    <button id="next-page">Next</button>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="info.js"></script>
+  <script src="pagin.js"></script>
+</body>
+</html>
