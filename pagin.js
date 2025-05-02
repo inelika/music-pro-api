@@ -5,7 +5,7 @@ let currentArtistTracks = [];
 function showTracksPage() {
   const container = document.getElementById('tracks-container');
   const pageText = document.getElementById('page-indicator');
-  container.innerHTML = '';
+  container.innerHTML = ''; 
 
   const start = (currentPage - 1) * tracksPerPage;
   const pageTracks = currentArtistTracks.slice(start, start + tracksPerPage);
